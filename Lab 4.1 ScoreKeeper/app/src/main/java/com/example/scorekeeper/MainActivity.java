@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -66,20 +67,39 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
             switch(v.getId()){
                 case R.id.buttonAddA:
-                    teamAScore = teamAScore + intVal;
-                    scoreTeamOne.setText("New Score: " + String.valueOf(teamAScore));
+                    if(teamAScore > 50 ){
+                        scoreTeamOne.setText("OOPS Greater than 50!");
+                    }else {
+                        teamAScore = teamAScore + intVal;
+                        scoreTeamOne.setText("New Score: " + String.valueOf(teamAScore));
+                    }
                     break;
                 case R.id.buttonAddB:
-                    teamBScore = teamBScore + intVal;
-                    scoreTeamTwo.setText("New Score: " + String.valueOf(teamBScore));
+                    if(teamBScore > 50 ){
+                        scoreTeamTwo.setText("OOPS Greater than 50!");
+                    }else {
+                        teamBScore = teamBScore + intVal;
+                        scoreTeamTwo.setText("New Score: " + String.valueOf(teamBScore));
+                    }
                     break;
                 case R.id.buttonSubA:
-                    teamAScore = teamAScore - intVal;
-                    scoreTeamOne.setText("New Score: " + String.valueOf(teamAScore));
+
+                    if(teamAScore <= 0 ){
+                        //Toast.makeText(getApplicationContext(),"Negative values not allowed",Toast.LENGTH_SHORT).show();
+                        scoreTeamOne.setText("OOPS less than 0!");
+                    }else{
+                        teamAScore = teamAScore - intVal;
+                        scoreTeamOne.setText("New Score: " + String.valueOf(teamAScore));
+                    }
                     break;
                 case R.id.buttonSubB:
-                    teamBScore = teamBScore - intVal;
-                    scoreTeamTwo.setText("New Score: " + String.valueOf(teamBScore));
+                    if(teamBScore <= 0 ){
+                        //Toast.makeText(getApplicationContext(),"Negative values not allowed", Toast.LENGTH_SHORT).show();
+                        scoreTeamTwo.setText("OOPS less than 0!");
+                    }else{
+                        teamBScore = teamBScore - intVal;
+                        scoreTeamTwo.setText("New Score: " + String.valueOf(teamBScore));
+                    }
                     break;
             }
 
