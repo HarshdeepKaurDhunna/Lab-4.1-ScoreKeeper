@@ -15,13 +15,13 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.637" />
+        app:layout_constraintVertical_bias="0.638" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/scoreTeamOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Team 1 Score"
+        android:text="Team A Score"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -30,10 +30,10 @@
         app:layout_constraintVertical_bias="0.254" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/scoreTeamTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Team 2 Score"
+        android:text="Team B Score"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.781"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -42,7 +42,7 @@
         app:layout_constraintVertical_bias="0.254" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonAddA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TEAM 1 ADD"
@@ -53,8 +53,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.427" />
 
+    <!-- add score buttons -->
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonSubA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TEAM 1 SUB"
@@ -66,7 +67,7 @@
         app:layout_constraintVertical_bias="0.543" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonAddB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TEAM 2 SUB"
@@ -77,8 +78,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.543" />
 
+    <!-- add score buttons -->
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonSubB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TEAM 2 ADD"
@@ -90,39 +92,42 @@
         app:layout_constraintVertical_bias="0.427" />
 
     <RadioButton
-        android:id="@+id/radioButton"
+        android:id="@+id/radioButtonIncreaseOne"
         android:layout_width="134dp"
         android:layout_height="50dp"
-        android:text="Increase By 15"
+        android:text="Increase By 1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.191"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.751" />
+        app:layout_constraintVertical_bias="0.751"
+        android:onClick="onRadioButtonClicked"/>
 
     <RadioButton
-        android:id="@+id/radioButton2"
+        android:id="@+id/radioButtonIncreaseThree"
         android:layout_width="134dp"
         android:layout_height="50dp"
-        android:text="Increase By 45"
+        android:text="Increase By 3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.861" />
-
+        app:layout_constraintVertical_bias="0.861"
+        android:onClick="onRadioButtonClicked"/>
     <RadioButton
-        android:id="@+id/radioButton3"
+        android:id="@+id/radioButtonIncreaseTwo"
         android:layout_width="134dp"
         android:layout_height="50dp"
-        android:text="Increase By 30"
+        android:text="Increase By 2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.83"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.751" />
+        app:layout_constraintVertical_bias="0.751"
+        android:onClick="onRadioButtonClicked"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
